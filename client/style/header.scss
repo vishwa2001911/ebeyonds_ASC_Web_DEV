@@ -1,0 +1,167 @@
+
+// css for header component
+
+
+$header-color: #f9b092;
+$nav-bg-color:gray;
+$nav-hover-color: #759199;
+$font-size:20px;
+$bg-color-res-nav:#85929E ;
+
+
+
+@mixin flexBox($justify, $align){
+    display: flex;
+    justify-content:$justify;
+    align-items: $align;
+}
+
+
+.header{
+    padding: 10px 10px 10px 50px;
+    color: $header-color;
+    font-size: $font-size;
+}
+
+
+
+.nav{
+    @include flexBox(space-between,center);
+    height: 48px;
+    background-color: $nav-bg-color;
+
+    .nav-in{
+        @include flexBox(space-between,baseline);
+    }
+    .nav-Ul{
+        
+        //display: flex;
+        @include flexBox(space-between,center);
+        
+        max-width:500px;
+        .nav-li{
+            list-style: none;
+            padding: 12px;
+            cursor: pointer;
+            transition: 0.4s;
+            &:hover{
+                background-color: $nav-hover-color;
+            }
+
+        }
+    
+
+    }
+    // css for Navbar dropdown
+    .res-box{
+        display: none;
+        position: relative;
+        z-index: 2;
+            .icon{
+                padding: 12px;
+                cursor: pointer;
+            }
+            .res-inside-box{
+                position: absolute;
+                width: 300px;
+                height: 100vh;
+                background-color: $bg-color-res-nav;
+                top: 46px;
+                left: -315px;
+                transition: 0.5s;
+                .nav-Ul-sm{
+                  
+                    width: 100%;
+                    .nav-li-sm{
+                        @include flexBox(center,center);
+                        cursor: pointer;
+                        width: 100%;
+                        height: 50px;
+                        list-style: none;
+                        border-bottom: 1px solid black;
+                        transition: 0.4s;
+                        &:hover{
+                            background-color: $nav-hover-color;
+                        }
+                    }
+                }
+            }
+    }
+
+
+    // css for language dropdown
+    .lang{
+        font-size: 15px;
+        position: relative;
+        .Btn{
+            @include flexBox(space-between,center);
+            width: 170px;
+            padding: 3px;
+            background-color: white;
+            cursor:pointer;
+            border: none;
+            outline:none;
+            padding: 0 10px;
+        }
+        .languageBox{
+            z-index: 3;
+            display: none;
+            .lang-ul{
+                width: 100%;
+                background-color: #f1f0f0;
+                height: 100px;
+                z-index: 4;
+                position: absolute;
+                top: 23px;
+                left: 0px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+
+                // css for language dropdown items
+                .lang-li{
+                    width: 100%;
+                    padding: 2px;
+                    list-style: none;
+                    display: flex;
+                    padding-left: 10px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #f9b092;
+                    }
+                }
+
+            }
+
+
+        }
+    }
+    
+
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width:806px) {
+    .nav{
+        .nav-Ul{
+            display: none;
+        }
+
+        .language{
+            margin-top: 7px;
+            margin-right: 10px;
+        }
+
+        .res-box{
+            display: block;
+            
+        }
+    }
+}

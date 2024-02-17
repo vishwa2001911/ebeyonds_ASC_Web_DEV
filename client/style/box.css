@@ -1,0 +1,25 @@
+.all-box {
+  margin-bottom: 100px;
+}
+.all-box .box-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+.all-box .box-content .box-img {
+  width: 300px;
+}
+.all-box .box-content .box-title {
+  font-size: 20px;
+  color: black;
+}
+.all-box .box-content .box-text {
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  font-weight: 600;
+  width: 300px;
+}/*# sourceMappingURL=box.css.map */

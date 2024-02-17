@@ -1,0 +1,26 @@
+.content {
+  padding: 30px;
+  margin-top: 100px;
+}
+
+.team-header-inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #bf5e34;
+}
+
+.team-header-insite-p {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.our-team-border {
+  width: 300px;
+  margin-top: 10px;
+}/*# sourceMappingURL=our-teams-header.css.map */
